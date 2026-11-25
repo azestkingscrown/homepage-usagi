@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>치지직 알림 봇 설명서 (레거시 아카이브) | Azest_Kingscrown</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/docs/tremor-docs.css?v=20261124" />
+</head>
+<body>
+  <!-- Desktop Sidebar -->
+  <aside class="sidebar-desktop" aria-label="주 사이드바">
+    <div class="sidebar-top">
+      <a class="brand-link" data-route="home" href="/">
+        <span class="brand-mark">AK</span>
+        <div class="brand-info">
+          <p class="brand-name">Azest_Kingscrown</p>
+          <p class="brand-sub">Workspace &amp; Infra</p>
+        </div>
+      </a>
+      <button type="button" class="theme-btn" data-theme-toggle>Auto</button>
+    </div>
+
+    <nav class="nav-sections" aria-label="데스크톱 내비게이션">
+      <div>
+        <span class="nav-group-label">Workspace</span>
+        <ul class="nav-list">
+          <li><a class="nav-link" data-route="home" href="/">Overview</a></li>
+          <li><a class="nav-link active" data-route="guide" href="/chzzk-bot-guide">치지직 봇 가이드</a></li>
+          <li><a class="nav-link" data-route="update" href="/chzzk-bot-update">업데이트 내역</a></li>
+          <li><a class="nav-link" data-route="tech" href="/technical-info">기술 문서</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="nav-group-label">Services &amp; Admin</span>
+        <ul class="nav-list">
+          <li><a class="nav-link" data-route="ddns" href="/ddns"><span>DDNS 관리</span><span class="nav-tag">Auth</span></a></li>
+          <li><a class="nav-link" data-route="minecraft" href="/minecraft"><span>Minecraft 제어</span><span class="nav-tag">Auth</span></a></li>
+          <li><a class="nav-link" data-route="hosting" href="/hosting"><span>File Hosting</span><span class="nav-tag">OTP</span></a></li>
+          <li><a class="nav-link" data-route="admin" href="/admin"><span>Admin 대시보드</span><span class="nav-tag">OTP</span></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="nav-group-label">Shortcuts</span>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+          <li><a class="nav-link" href="https://discord.gg/your-invite-code" target="_blank" rel="noopener noreferrer">익명 문의 서버 ↗</a></li>
+          <li><a class="nav-link" href="https://sub.example.com/" target="_blank" rel="noopener noreferrer">외부 링크 ↗</a></li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Mobile Top Header -->
+  <header class="mobile-header">
+    <a class="brand-link" data-route="home" href="/">
+      <span class="brand-mark">AK</span>
+      <div class="brand-info">
+        <p class="brand-name">Azest_Kingscrown</p>
+        <p class="brand-sub">Chzzk Bot Manual</p>
+      </div>
+    </a>
+    <div class="mobile-actions">
+      <button type="button" class="theme-btn" data-theme-toggle>Auto</button>
+      <button type="button" id="mobileMenuOpen" class="menu-btn" aria-label="메뉴 열기">메뉴</button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside id="mobileDrawer" class="drawer-overlay" aria-label="모바일 내비게이션">
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <div>
+          <p class="brand-name">Azest_Kingscrown</p>
+          <p class="brand-sub">Workspace &amp; Infra</p>
+        </div>
+        <button type="button" id="mobileMenuClose" class="drawer-close" aria-label="닫기">&times;</button>
+      </div>
+      <nav class="nav-sections" aria-label="모바일 내비게이션 메뉴">
+        <div>
+          <span class="nav-group-label">Workspace</span>
+          <ul class="nav-list">
+            <li><a class="nav-link" data-route="home" href="/">Overview</a></li>
+            <li><a class="nav-link active" data-route="guide" href="/chzzk-bot-guide">치지직 봇 가이드</a></li>
+            <li><a class="nav-link" data-route="update" href="/chzzk-bot-update">업데이트 내역</a></li>
+            <li><a class="nav-link" data-route="tech" href="/technical-info">기술 문서</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- App Shell -->
+  <div class="app-shell">
+    <main class="doc-main">
+      <div class="doc-header">
+        <div>
+          <div class="badge-row">
+            <span class="badge badge-warn">Archive Manual</span>
+            <span class="badge">Chzzk Noti Bot</span>
+          </div>
+          <h1 class="doc-title">치지직 알림 봇 사용 설명서</h1>
+          <p class="doc-subtitle">커뮤니티 공지 및 생방송 시작 알림 서비스</p>
+        </div>
+        <div class="btn-row" style="margin-top:0">
+          <a class="btn btn-primary" data-route="guide" href="/chzzk-bot-guide">최신 공식 가이드 보기 →</a>
+        </div>
+      </div>
+
+      <div class="doc-stack">
+        <section class="doc-card">
+          <h2>안내 사항</h2>
+          <div class="doc-callout doc-callout-warn">
+            <strong>안내:</strong> 현재 봇은 최신 슬래시(<code>/</code>) 명령어 체계로 업그레이드되었습니다. 최신 사용법은 <a data-route="guide" href="/chzzk-bot-guide" style="text-decoration:underline;font-weight:700">공식 사용 설명서</a>를 참고해 주세요.
+          </div>
+          <p style="margin-top:0.85rem">오류 발견 시 개발자에게 문의해 주시면 감사하겠습니다.</p>
+        </section>
+
+        <section class="doc-card">
+          <h2>1. 봇 초대하기</h2>
+          <p>서버 관리자 권한이 있는 사용자가 아래 링크를 통해 봇을 초대할 수 있습니다.</p>
+          <h3>필수 권한 체크 항목</h3>
+          <div class="perm-chips">
+            <span class="perm-chip">채널 보기</span>
+            <span class="perm-chip">메시지 보내기</span>
+            <span class="perm-chip">스레드에서 메시지 보내기</span>
+            <span class="perm-chip">메시지 관리</span>
+            <span class="perm-chip">링크 첨부</span>
+            <span class="perm-chip">메시지 기록 보기</span>
+            <span class="perm-chip">@everyone, @here, 모든 역할 멘션하기</span>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://discord.com/discovery/applications/YOUR_BOT_APP_ID" target="_blank" rel="noopener noreferrer">봇 초대하기</a>
+          </div>
+        </section>
+
+        <section class="doc-card">
+          <h2>2. 주요 명령어</h2>
+          <p>접두사 <code>!</code>를 사용하여 명령어를 실행합니다. (최신 버전에서는 <code>/</code> 슬래시 명령어 지원)</p>
+          <div class="table-wrap">
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>명령어</th>
+                  <th>설명</th>
+                  <th>예시</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>!사용법</code></td>
+                  <td>봇의 전체 명령어와 공지 사항 확인</td>
+                  <td><code>!사용법</code></td>
+                </tr>
+                <tr>
+                  <td><code>!등록</code></td>
+                  <td>알림을 받을 스트리머를 현재 채널에 등록</td>
+                  <td><code>!등록 강소연</code></td>
+                </tr>
+                <tr>
+                  <td><code>!삭제</code></td>
+                  <td>등록된 스트리머 알림을 해제</td>
+                  <td><code>!삭제 강소연</code></td>
+                </tr>
+                <tr>
+                  <td><code>!리스트</code></td>
+                  <td>현재 채널의 알림 목록 확인</td>
+                  <td><code>!리스트</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="doc-card">
+          <h2>3. 주요 기능 소개</h2>
+          <div class="feature-grid">
+            <div class="feature-item">
+              <h3>1. 스마트 닉네임 검색</h3>
+              <p>스트리머의 32자리 고유 ID를 몰라도 <strong>닉네임만으로 쉽게 등록</strong>이 가능합니다.</p>
+            </div>
+            <div class="feature-item">
+              <h3>2. 실시간 생방송 썸네일</h3>
+              <p>방송 시작 알림 시 캐시 문제를 해결하여 <strong>현재 방송 중인 실시간 화면</strong>을 임베드로 보여줍니다.</p>
+            </div>
+            <div class="feature-item">
+              <h3>3. 원클릭 이동 버튼</h3>
+              <p>알림 하단의 버튼을 통해 <strong>커뮤니티 공지 상세 페이지</strong>나 <strong>생방송 채널</strong>로 즉시 이동할 수 있습니다.</p>
+            </div>
+            <div class="feature-item">
+              <h3>4. 안정적인 알림 시스템</h3>
+              <p>SQLite 데이터베이스와 최적화된 스케줄러를 사용하여 API 차단 걱정 없이 <strong>빠르고 정확한 알림</strong>을 보냅니다.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-card">
+          <h2>4. 자주 묻는 질문 (FAQ)</h2>
+          <p><strong>Q. 알림이 오지 않아요!</strong></p>
+          <blockquote class="doc-quote">
+            A. 봇이 해당 채널에 <code>메시지 보내기</code> 및 <code>링크 임베드</code> 권한이 있는지 확인해 주세요. 권한이 없을 경우 명령어를 입력한 사용자에게 <strong>개인 메시지(DM)</strong>로 오류 안내가 발송됩니다.
+          </blockquote>
+          <p><strong>Q. 닉네임으로 등록했는데 다른 사람이 등록돼요.</strong></p>
+          <blockquote class="doc-quote">
+            A. 검색 결과 중 인지도가 가장 높은 채널을 우선적으로 가져옵니다. 만약 결과가 다르다면 스트리머의 <strong>32자리 고유 ID</strong>를 입력해 주세요.
+          </blockquote>
+        </section>
+      </div>
+    </main>
+
+    <footer class="doc-footer">
+      <div class="doc-footer-inner">
+        <p class="footer-copy">© 2026 Chzzk Noti Bot · Azest_Kingscrown. All rights reserved.</p>
+        <div class="support-links">
+          <a class="support-kr" href="https://example.com/support-kr" target="_blank" rel="noopener noreferrer">Support (Korean)</a>
+          <a class="support-global" href="https://ko-fi.com/your-handle" target="_blank" rel="noopener noreferrer">Support (Global)</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Lightbox Viewer -->
+  <div id="imageViewer" class="viewer-overlay">
+    <button type="button" id="viewerClose" class="viewer-close" aria-label="닫기">&times;</button>
+    <img class="viewer-content" id="viewerImage" alt="확대된 이미지" />
+    <div id="viewerCaption" class="viewer-caption"></div>
+  </div>
+
+  <script src="/docs/tremor-docs.js?v=20261124"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>치지직 알림 봇 - 기술 문서 및 데이터 정책 | Azest_Kingscrown</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/docs/tremor-docs.css?v=20261125" />
+</head>
+<body>
+  <!-- Desktop Sidebar -->
+  <aside class="sidebar-desktop" aria-label="주 사이드바">
+    <div class="sidebar-top">
+      <a class="brand-link" data-route="home" href="/">
+        <span class="brand-mark">AK</span>
+        <div class="brand-info">
+          <p class="brand-name">Azest_Kingscrown</p>
+          <p class="brand-sub">Workspace &amp; Infra</p>
+        </div>
+      </a>
+      <div class="sidebar-actions">
+        <button type="button" class="theme-btn lang-btn" data-lang-toggle aria-label="Switch to English" title="Switch to English">EN</button>
+        <button type="button" class="theme-btn" data-theme-toggle>Auto</button>
+      </div>
+    </div>
+
+    <nav class="nav-sections" aria-label="데스크톱 내비게이션">
+      <div>
+        <span class="nav-group-label">Workspace</span>
+        <ul class="nav-list">
+          <li><a class="nav-link" data-route="home" href="/">Overview</a></li>
+          <li><a class="nav-link" data-route="guide" href="/chzzk-bot-guide">치지직 봇 가이드</a></li>
+          <li><a class="nav-link" data-route="update" href="/chzzk-bot-update">업데이트 내역</a></li>
+          <li><a class="nav-link active" data-route="tech" href="/technical-info">기술 문서</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="nav-group-label">Services &amp; Admin</span>
+        <ul class="nav-list">
+          <li><a class="nav-link" data-route="ddns" href="/ddns"><span>DDNS 관리</span><span class="nav-tag">Auth</span></a></li>
+          <li><a class="nav-link" data-route="minecraft" href="/minecraft"><span>Minecraft 제어</span><span class="nav-tag">Auth</span></a></li>
+          <li><a class="nav-link" data-route="hosting" href="/hosting"><span>File Hosting</span><span class="nav-tag">OTP</span></a></li>
+          <li><a class="nav-link" data-route="admin" href="/admin"><span>Admin 대시보드</span><span class="nav-tag">OTP</span></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="nav-group-label">Shortcuts</span>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+          <li><a class="nav-link" href="https://discord.gg/your-invite-code" target="_blank" rel="noopener noreferrer">익명 문의 서버 ↗</a></li>
+          <li><a class="nav-link" href="https://sub.example.com/" target="_blank" rel="noopener noreferrer">외부 링크 ↗</a></li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Mobile Top Header -->
+  <header class="mobile-header">
+    <a class="brand-link" data-route="home" href="/">
+      <span class="brand-mark">AK</span>
+      <div class="brand-info">
+        <p class="brand-name">Azest_Kingscrown</p>
+        <p class="brand-sub">Technical Docs</p>
+      </div>
+    </a>
+    <div class="mobile-actions">
+      <button type="button" class="theme-btn lang-btn" data-lang-toggle aria-label="Switch to English" title="Switch to English">EN</button>
+      <button type="button" class="theme-btn" data-theme-toggle>Auto</button>
+      <button type="button" id="mobileMenuOpen" class="menu-btn" aria-label="메뉴 열기">메뉴</button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside id="mobileDrawer" class="drawer-overlay" aria-label="모바일 내비게이션">
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <div>
+          <p class="brand-name">Azest_Kingscrown</p>
+          <p class="brand-sub">Workspace &amp; Infra</p>
+        </div>
+        <button type="button" id="mobileMenuClose" class="drawer-close" aria-label="닫기">&times;</button>
+      </div>
+      <nav class="nav-sections" aria-label="모바일 내비게이션 메뉴">
+        <div>
+          <span class="nav-group-label">Workspace</span>
+          <ul class="nav-list">
+            <li><a class="nav-link" data-route="home" href="/">Overview</a></li>
+            <li><a class="nav-link" data-route="guide" href="/chzzk-bot-guide">치지직 봇 가이드</a></li>
+            <li><a class="nav-link" data-route="update" href="/chzzk-bot-update">업데이트 내역</a></li>
+            <li><a class="nav-link active" data-route="tech" href="/technical-info">기술 문서</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="nav-group-label">Services &amp; Admin</span>
+          <ul class="nav-list">
+            <li><a class="nav-link" data-route="ddns" href="/ddns">DDNS 관리</a></li>
+            <li><a class="nav-link" data-route="minecraft" href="/minecraft">Minecraft 제어</a></li>
+            <li><a class="nav-link" data-route="hosting" href="/hosting">File Hosting</a></li>
+            <li><a class="nav-link" data-route="admin" href="/admin">Admin 대시보드</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- App Shell -->
+  <div class="app-shell">
+    <main class="doc-main">
+      <div class="doc-header">
+        <div>
+          <div class="badge-row">
+            <span class="badge badge-success">Discord Verified App</span>
+            <span class="badge">Architecture &amp; Privacy</span>
+          </div>
+          <h1 class="doc-title">기술 문서 및 데이터 정책</h1>
+          <p class="doc-subtitle">
+            치지직 알림 봇은 디스코드 본사의 보안 심사를 통과한 <strong>공식 인증 앱(Verified App)</strong>으로서, 프라이버시 보호와 고가용성 아키텍처를 최우선으로 설계되었습니다.
+          </p>
+        </div>
+        <div class="btn-row" style="margin-top:0">
+          <a class="btn btn-secondary" data-route="guide" href="/chzzk-bot-guide">← 설명서로 돌아가기</a>
+        </div>
+      </div>
+
+      <div class="doc-stack">
+        <!-- 1. Security -->
+        <section class="doc-card">
+          <h2>1. 보안 및 개인정보 보호 정책</h2>
+          <h3>① Zero Privileged Intents: 기술을 통한 보안 증명</h3>
+          <p>단순히 보안을 약속하는 것에 그치지 않고, 기술적으로 권한을 완전히 차단함으로써 보안을 <strong>증명</strong>합니다. 본 봇은 디스코드의 모든 민감한 권한(Privileged Gateway Intents)을 사용하지 않습니다(OFF).</p>
+          <ul class="doc-list">
+            <li><span class="highlight">Message Content Intent (OFF):</span> 봇은 유저의 채팅 내용을 감시하거나 읽을 수 없습니다. 오직 슬래시 명령어(<code>/</code>)를 통해서만 상호작용합니다.</li>
+            <li><span class="highlight">Server Members Intent (OFF):</span> 서버의 전체 멤버 명부를 수집하거나 조회할 권한이 원천 차단되어 있습니다.</li>
+            <li><span class="highlight">Presence Intent (OFF):</span> 유저의 온라인 상태나 활동 정보를 일절 추적하지 않습니다.</li>
+          </ul>
+          <div class="doc-callout">
+            [ 모든 Privileged Intents가 비활성화된 설정 화면 스크린샷 위치 ]
+          </div>
+
+          <h3>② 슬래시 명령어(Slash Commands) 전용 설계</h3>
+          <p>모든 기능은 디스코드의 최신 API 규격에 맞춰 설계되었습니다. 봇은 유저가 직접 명령어를 입력할 때만 응답하며, 평상시에는 어떠한 데이터도 감시하거나 수집하지 않는 수동적 구조를 유지합니다.</p>
+
+          <h3>③ 공식 인증 및 신원 검증 (Verified)</h3>
+          <p>치지직 알림 봇은 디스코드의 보안 심사와 신원 검증을 통과하여 <strong>공식 인증 배지</strong>를 획득했습니다. 총 인원수 1만 명 이상 규모에서도 안정적으로 작동하며 디스코드 데이터 보호 정책을 준수합니다.</p>
+        </section>
+
+        <!-- 2. Minimal Data -->
+        <section class="doc-card">
+          <h2>2. 최소 데이터 저장 및 관리</h2>
+          <ul class="doc-list">
+            <li><span class="highlight">최소 데이터 원칙:</span> 알림 전송에 필수적인 디스코드 채널 ID와 스트리머 고유 ID(32자리 해시) 및 닉네임만을 저장합니다. 이름, 이메일, 멤버 리스트 등 개인 식별 정보(PII)는 수집하지 않습니다.</li>
+            <li><span class="highlight">격리된 보안 인프라:</span> 모든 데이터는 Oracle Cloud 및 Google Cloud Platform의 독립 가상 환경 내 SQLite 데이터베이스로 관리되며 외부 네트워크 접근이 차단됩니다.</li>
+            <li><span class="highlight">즉각적인 데이터 파기:</span> 사용자가 설정을 삭제하거나 봇이 서버에서 퇴장할 경우 해당 서버 관련 모든 데이터는 즉시 영구 파기됩니다.</li>
+          </ul>
+        </section>
+
+        <!-- 3. Distributed Proxy -->
+        <section class="doc-card">
+          <h2>3. 글로벌 분산 프록시 및 네트워크 안정성</h2>
+          <p>보안성뿐만 아니라 알림의 <strong>신속성</strong>과 <strong>가동률</strong>을 극대화하는 분산 네트워크를 운영합니다.</p>
+          <ul class="doc-list">
+            <li><span class="highlight">글로벌 5-Node 분산 프록시 아키텍처:</span> 한국(GCP-Seoul, GCP-Direct), 해외(Oracle Proxy 1, 2), 글로벌 엣지(Cloudflare Workers) 5개 독립 노드가 라운드 로빈(Round-Robin) 방식으로 API 요청을 분산 처리하여 단일 서버 장애와 429 제한을 방어합니다.</li>
+            <li><span class="highlight">방대한 유동 IP 풀 활용:</span> GCP 서울 리전(asia-northeast3) 약 19만 개(193,536개) 및 Cloudflare 약 152만 개(1,524,736개)의 글로벌 IPv4 네트워크를 기반으로 차단 및 쓰로틀링에 유연하게 대응합니다.</li>
+            <li><span class="highlight">무중단 자동 장애 조치(Zero-Downtime Failover):</span> 특정 노드에서 타임아웃이나 차단 응답 발생 시 즉각 대기 노드로 요청을 우회(Retry)하여 알림 누락을 방지합니다.</li>
+            <li><span class="highlight">트래픽 변조(Jitter) 기술:</span> 매 요청 사이에 0.1s~0.3s 무작위 난수 지연을 부여해 기계적 패턴 탐지를 회피합니다.</li>
+          </ul>
+          <div class="doc-callout">
+            [ 5개 글로벌 노드의 실시간 건강 상태(Health Check) 모니터링 스크린샷 위치 ]
+          </div>
+        </section>
+
+        <!-- 4. Multi-Cloud HA -->
+        <section class="doc-card">
+          <h2>4. Multi-Cloud 고가용성(HA) 및 데이터 동기화</h2>
+          <p>2026년 5월 1일 적용된 아키텍처를 통해 24/365 무중단 운영을 보장합니다.</p>
+
+          <h3>① High Availability (HA) 아키텍처</h3>
+          <ul class="doc-list">
+            <li><span class="highlight">Active-Passive Failover:</span> 메인 노드(GCP)와 예비 노드(Oracle Cloud)가 상호 감시 체계를 유지하며, 메인 장애 시 30초 이내 예비 노드가 자동으로 역할을 승격(Promotion)합니다.</li>
+            <li><span class="highlight">Multi-Cloud Infrastructure:</span> 서로 다른 클라우드 벤더 분산으로 특정 벤더 전역 장애 상황에도 서비스 연속성을 보장합니다.</li>
+          </ul>
+
+          <h3>② 실시간 데이터 동기화 엔진</h3>
+          <ul class="doc-list">
+            <li><span class="highlight">Query Mirroring Technology:</span> Master 노드의 모든 DB 변경(INSERT, UPDATE, DELETE)을 REST API로 Slave 노드에 즉시 미러링하여 99.9% 이상 데이터 일치율을 유지합니다.</li>
+            <li><span class="highlight">Boot-time Full-Sync:</span> 재시작 시 상대 노드로부터 전체 스냅샷을 수신하여 오프라인 기간 누락을 자동 보정합니다.</li>
+          </ul>
+
+          <h3>③ 중복 알림 및 상호작용 충돌 방지</h3>
+          <ul class="doc-list">
+            <li><span class="highlight">Startup Role Negotiation:</span> 부팅 시 Master 존재 여부를 확인해 스스로 Stand-by 모드로 진입하여 중복 발송을 차단합니다.</li>
+            <li><span class="highlight">Smart Interaction Handling:</span> Slash Command 요청 시 Master 노드만 응답하도록 제어해 <code>Unknown Interaction</code> 에러를 방지합니다.</li>
+          </ul>
+        </section>
+
+        <!-- 5. Region Lock -->
+        <section class="doc-card">
+          <h2>5. 치지직 지역 제한(9004) 우회 및 로직 최적화</h2>
+          <p>2026년 5월 3일 도입된 <strong>서울 리전 프록시(GCF)</strong>를 통해 국내 전용 방송 설정으로 인한 500/9004 에러를 해결했습니다.</p>
+          <ul class="doc-list">
+            <li><span class="highlight">서울 리전 전용 중계 노드:</span> Google Cloud Functions(asia-northeast3)를 활용해 한국 내 IP(193,536개)로 안정적으로 국내 접속을 처리합니다.</li>
+            <li><span class="highlight">지능형 API 라우팅:</span> 지역 제한 우회가 필요한 라이브 API는 서울 프록시를 최우선 사용하고, 커뮤니티 API는 기존 분산 노드를 활용하도록 이원화했습니다.</li>
+            <li><span class="highlight">무중단 페일오버:</span> 서울 프록시 실패 시 다음 가용 노드로 자동 전환됩니다.</li>
+          </ul>
+        </section>
+
+        <!-- 6. Tech Stack -->
+        <section class="doc-card">
+          <h2>6. 기술 스택 (Technical Stack)</h2>
+          <div class="table-wrap">
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>영역</th>
+                  <th>구성 요소</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Infrastructure</strong></td><td>GCP (Master &amp; Seoul Proxy), Oracle Cloud (Slave)</td></tr>
+                <tr><td><strong>Runtime</strong></td><td>Node.js (v20.x LTS)</td></tr>
+                <tr><td><strong>Frameworks</strong></td><td>discord.js v14, Express.js (Sync Server)</td></tr>
+                <tr><td><strong>Database</strong></td><td>SQLite3 (WAL &amp; Distributed Mirroring)</td></tr>
+                <tr><td><strong>Communication</strong></td><td>Axios (Inter-node secure communication)</td></tr>
+                <tr><td><strong>Scheduler</strong></td><td>node-schedule (High-precision cron)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 7. Permissions -->
+        <section class="doc-card">
+          <h2>7. 권한 사용의 정당성</h2>
+          <p>초대 권한(<code>150528</code>)은 오직 서비스 제공을 위한 기술적 필수 용도로만 사용됩니다.</p>
+          <ul class="doc-list">
+            <li><span class="highlight">채널 보기:</span> 알림을 보낼 채널을 인식하기 위해 필요합니다.</li>
+            <li><span class="highlight">메시지 보내기 &amp; 링크 첨부:</span> 치지직 방송/커뮤니티 알림 전송 및 썸네일 임베드 포함을 위해 사용됩니다.</li>
+            <li><span class="highlight">모두 멘션하기:</span> 알림 전송 시 <code>@everyone</code>, <code>@here</code> 또는 특정 역할 멘션을 위해 사용됩니다.</li>
+          </ul>
+        </section>
+
+        <!-- 8. Deletion & Contact -->
+        <section class="doc-card">
+          <h2>8. 데이터 삭제 요청 및 문의</h2>
+          <p>자신의 데이터 삭제를 원하시거나 프라이버시 정책에 대한 문의가 있으신 경우 아래 연락처로 문의해 주시기 바랍니다.</p>
+          <div class="doc-callout">
+            이메일 문의: <code>contact@example.com</code>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" data-route="guide" href="/chzzk-bot-guide">← 설명서로 돌아가기</a>
+            <a class="btn btn-secondary" data-route="home" href="/">메인 대시보드로</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="doc-footer">
+      <div class="doc-footer-inner">
+        <p class="footer-copy">© 2026 Chzzk Noti Bot · Azest_Kingscrown. All rights reserved.</p>
+        <div class="support-links">
+          <a class="support-kr" href="https://example.com/support-kr" target="_blank" rel="noopener noreferrer">Support (Korean)</a>
+          <a class="support-global" href="https://ko-fi.com/your-handle" target="_blank" rel="noopener noreferrer">Support (Global)</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Lightbox Viewer -->
+  <div id="imageViewer" class="viewer-overlay">
+    <button type="button" id="viewerClose" class="viewer-close" aria-label="닫기">&times;</button>
+    <img class="viewer-content" id="viewerImage" alt="확대된 이미지" />
+    <div id="viewerCaption" class="viewer-caption"></div>
+  </div>
+
+  <script src="/docs/tremor-docs.js?v=20261125"></script>
+</body>
+</html>

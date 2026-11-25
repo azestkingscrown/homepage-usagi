@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Chzzk Notification Bot Official Guide | Azest_Kingscrown</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/docs/tremor-docs.css?v=20261125" />
+</head>
+<body>
+  <!-- Desktop Sidebar -->
+  <aside class="sidebar-desktop" aria-label="Primary sidebar">
+    <div class="sidebar-top">
+      <a class="brand-link" data-route="home" href="/">
+        <span class="brand-mark">AK</span>
+        <div class="brand-info">
+          <p class="brand-name">Azest_Kingscrown</p>
+          <p class="brand-sub">Workspace &amp; Infra</p>
+        </div>
+      </a>
+      <div class="sidebar-actions">
+        <button type="button" class="theme-btn lang-btn" data-lang-toggle aria-label="한국어로 전환" title="한국어로 전환">KO</button>
+        <button type="button" class="theme-btn" data-theme-toggle>Auto</button>
+      </div>
+    </div>
+
+    <nav class="nav-sections" aria-label="Desktop navigation">
+      <div>
+        <span class="nav-group-label">Workspace</span>
+        <ul class="nav-list">
+          <li><a class="nav-link" data-route="home" href="/">Overview</a></li>
+          <li><a class="nav-link active" data-route="guide" href="/chzzk-bot-guide">Chzzk Bot Guide</a></li>
+          <li><a class="nav-link" data-route="update" href="/chzzk-bot-update">Changelog</a></li>
+          <li><a class="nav-link" data-route="tech" href="/technical-info">Technical Docs</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="nav-group-label">Services &amp; Admin</span>
+        <ul class="nav-list">
+          <li><a class="nav-link" data-route="ddns" href="/ddns"><span>DDNS Manager</span><span class="nav-tag">Auth</span></a></li>
+          <li><a class="nav-link" data-route="minecraft" href="/minecraft"><span>Minecraft Control</span><span class="nav-tag">Auth</span></a></li>
+          <li><a class="nav-link" data-route="hosting" href="/hosting"><span>File Hosting</span><span class="nav-tag">OTP</span></a></li>
+          <li><a class="nav-link" data-route="admin" href="/admin"><span>Admin Dashboard</span><span class="nav-tag">OTP</span></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="nav-group-label">Shortcuts</span>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+          <li><a class="nav-link" href="https://discord.gg/your-invite-code" target="_blank" rel="noopener noreferrer">Anonymous Support ↗</a></li>
+          <li><a class="nav-link" href="https://sub.example.com/" target="_blank" rel="noopener noreferrer">External Link ↗</a></li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Mobile Top Header -->
+  <header class="mobile-header">
+    <a class="brand-link" data-route="home" href="/">
+      <span class="brand-mark">AK</span>
+      <div class="brand-info">
+        <p class="brand-name">Azest_Kingscrown</p>
+        <p class="brand-sub">Chzzk Bot Guide</p>
+      </div>
+    </a>
+    <div class="mobile-actions">
+      <button type="button" class="theme-btn lang-btn" data-lang-toggle aria-label="한국어로 전환" title="한국어로 전환">KO</button>
+      <button type="button" class="theme-btn" data-theme-toggle>Auto</button>
+      <button type="button" id="mobileMenuOpen" class="menu-btn" aria-label="Open menu">Menu</button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside id="mobileDrawer" class="drawer-overlay" aria-label="Mobile navigation">
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <div>
+          <p class="brand-name">Azest_Kingscrown</p>
+          <p class="brand-sub">Workspace &amp; Infra</p>
+        </div>
+        <button type="button" id="mobileMenuClose" class="drawer-close" aria-label="Close">&times;</button>
+      </div>
+      <nav class="nav-sections" aria-label="Mobile navigation menu">
+        <div>
+          <span class="nav-group-label">Workspace</span>
+          <ul class="nav-list">
+            <li><a class="nav-link" data-route="home" href="/">Overview</a></li>
+            <li><a class="nav-link active" data-route="guide" href="/chzzk-bot-guide">Chzzk Bot Guide</a></li>
+            <li><a class="nav-link" data-route="update" href="/chzzk-bot-update">Changelog</a></li>
+            <li><a class="nav-link" data-route="tech" href="/technical-info">Technical Docs</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="nav-group-label">Services &amp; Admin</span>
+          <ul class="nav-list">
+            <li><a class="nav-link" data-route="ddns" href="/ddns">DDNS Manager</a></li>
+            <li><a class="nav-link" data-route="minecraft" href="/minecraft">Minecraft Control</a></li>
+            <li><a class="nav-link" data-route="hosting" href="/hosting">File Hosting</a></li>
+            <li><a class="nav-link" data-route="admin" href="/admin">Admin Dashboard</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- App Shell -->
+  <div class="app-shell">
+    <main class="doc-main">
+      <div class="doc-header">
+        <div>
+          <div class="badge-row">
+            <span class="badge badge-success">Discord Verified App</span>
+            <span class="badge">Official Guide</span>
+          </div>
+          <h1 class="doc-title">Chzzk Notification Bot Official Guide</h1>
+          <p class="doc-subtitle">Real-time Discord alerts for Chzzk live streams &amp; community posts</p>
+        </div>
+        <div class="btn-row" style="margin-top:0">
+          <a class="btn btn-primary" href="https://discord.com/discovery/applications/YOUR_BOT_APP_ID" target="_blank" rel="noopener noreferrer">Invite Bot</a>
+          <a class="btn btn-secondary" data-route="tech" href="/technical-info">Technical Docs</a>
+        </div>
+      </div>
+
+      <div class="doc-stack">
+        <!-- Notice & Anonymous Contact -->
+        <section class="doc-card">
+          <h2>Notice &amp; Anonymous Support</h2>
+          <p>If you encounter an issue or have a feature suggestion, feel free to contact the developer for a quick response.</p>
+          <div class="doc-callout">
+            <p><strong>Fully Anonymous Support System Active</strong></p>
+            <p>To protect user privacy, we operate a <strong>1:1 anonymous ticket system</strong>. Your nickname is automatically anonymized upon joining the server, allowing you to safely communicate 1:1 with the team.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="https://discord.gg/your-invite-code" target="_blank" rel="noopener noreferrer">Join Support Server</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 1. Invite -->
+        <section class="doc-card">
+          <h2>1. Inviting the Bot</h2>
+          <p>Any server administrator can invite the bot directly via the official Discord App Directory.</p>
+          <h3>Required Permissions</h3>
+          <div class="perm-chips">
+            <span class="perm-chip">View Channels</span>
+            <span class="perm-chip">Send Messages</span>
+            <span class="perm-chip">Embed Links</span>
+            <span class="perm-chip">Mention @everyone, @here, and All Roles</span>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://discord.com/discovery/applications/YOUR_BOT_APP_ID" target="_blank" rel="noopener noreferrer">Invite Discord Bot</a>
+            <a class="btn btn-secondary" data-route="tech" href="/technical-info">Data Policy &amp; Technical Docs</a>
+          </div>
+        </section>
+
+        <!-- 2. Commands -->
+        <section class="doc-card">
+          <h2>2. Slash Commands</h2>
+          <p>All commands use Discord's native <code>/</code> slash prefix (the bot's registered slash command names are in Korean).</p>
+          <div class="table-wrap">
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>Command</th>
+                  <th>Description</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>/등록</code></td>
+                  <td>Subscribe to a streamer's live and/or community alerts</td>
+                  <td><code>/등록 [streamer] [type]</code></td>
+                </tr>
+                <tr>
+                  <td><code>/알림메시지설정</code></td>
+                  <td>Customize alert messages and target mention roles</td>
+                  <td><code>/알림메시지설정 [streamer] [type] ...</code></td>
+                </tr>
+                <tr>
+                  <td><code>/사용법</code></td>
+                  <td>View full bot command reference and notices</td>
+                  <td><code>/사용법</code></td>
+                </tr>
+                <tr>
+                  <td><code>/삭제</code></td>
+                  <td>Remove an existing streamer subscription</td>
+                  <td><code>/삭제 [streamer]</code></td>
+                </tr>
+                <tr>
+                  <td><code>/리스트</code></td>
+                  <td>List all active subscriptions in the current channel</td>
+                  <td><code>/리스트</code></td>
+                </tr>
+                <tr>
+                  <td><code>/핑</code></td>
+                  <td>Check real-time network latency and health</td>
+                  <td><code>/핑</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Working Example -->
+        <section class="doc-card">
+          <h2>Live Preview</h2>
+          <p>Here is the bot in action. It detects Chzzk live streams and new community announcements in real time and delivers clean embedded alerts.</p>
+          <div class="doc-callout">
+            Place a real-time notification preview image under <code>/uploads/</code> in production to display it here.
+          </div>
+        </section>
+
+        <!-- 3. Key Features -->
+        <section class="doc-card">
+          <h2>3. Key Features</h2>
+          <div class="feature-grid">
+            <div class="feature-item">
+              <h3>1. Smart Nickname Search</h3>
+              <p>Register streamers easily <strong>using just their nickname</strong> — no need to look up a 32-character channel ID.</p>
+            </div>
+            <div class="feature-item">
+              <h3>2. Live Stream Thumbnails</h3>
+              <p>Bypasses thumbnail caching to show a <strong>live preview frame of the active broadcast</strong> inside the Discord embed.</p>
+            </div>
+            <div class="feature-item">
+              <h3>3. One-Click Action Buttons</h3>
+              <p>Built-in buttons let viewers jump straight to the <strong>community post</strong> or <strong>live stream channel</strong> in one click.</p>
+            </div>
+            <div class="feature-item">
+              <h3>4. High-Reliability Delivery</h3>
+              <p>Powered by SQLite WAL storage and a distributed proxy scheduler for <strong>fast, accurate alerts</strong> without API rate-limit blocks.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. FAQ -->
+        <section class="doc-card">
+          <h2>4. Frequently Asked Questions (FAQ)</h2>
+          <p><strong>Q. I'm not receiving notifications!</strong></p>
+          <blockquote class="doc-quote">
+            A. Please verify that the bot has both <code>Send Messages</code> and <code>Embed Links</code> permissions in the target channel. If permissions are missing, an error notice is sent via <strong>Direct Message (DM)</strong> to the user who ran the command.
+          </blockquote>
+          <p><strong>Q. I registered by nickname, but the wrong streamer was added.</strong></p>
+          <blockquote class="doc-quote">
+            A. Search results prioritize the most popular matching channel. If it picks the wrong channel, register directly using the streamer's <strong>32-character Channel ID</strong>.
+          </blockquote>
+
+          <div class="btn-row">
+            <a class="btn btn-primary" data-route="update" href="/chzzk-bot-update">View Latest Changelog</a>
+            <a class="btn btn-secondary" data-route="home" href="/">← Back to Overview</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="doc-footer">
+      <div class="doc-footer-inner">
+        <p class="footer-copy">© 2026 Chzzk Noti Bot · Azest_Kingscrown. All rights reserved.</p>
+        <div class="support-links">
+          <a class="support-kr" href="https://example.com/support-kr" target="_blank" rel="noopener noreferrer">Support (Korea)</a>
+          <a class="support-global" href="https://ko-fi.com/your-handle" target="_blank" rel="noopener noreferrer">Support (Global)</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Lightbox Viewer -->
+  <div id="imageViewer" class="viewer-overlay">
+    <button type="button" id="viewerClose" class="viewer-close" aria-label="Close">&times;</button>
+    <img class="viewer-content" id="viewerImage" alt="Enlarged preview" />
+    <div id="viewerCaption" class="viewer-caption"></div>
+  </div>
+
+  <script src="/docs/tremor-docs.js?v=20261125"></script>
+</body>
+</html>

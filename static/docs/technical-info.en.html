@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Chzzk Notification Bot - Technical Docs &amp; Data Policy | Azest_Kingscrown</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/docs/tremor-docs.css?v=20261125" />
+</head>
+<body>
+  <!-- Desktop Sidebar -->
+  <aside class="sidebar-desktop" aria-label="Primary sidebar">
+    <div class="sidebar-top">
+      <a class="brand-link" data-route="home" href="/">
+        <span class="brand-mark">AK</span>
+        <div class="brand-info">
+          <p class="brand-name">Azest_Kingscrown</p>
+          <p class="brand-sub">Workspace &amp; Infra</p>
+        </div>
+      </a>
+      <div class="sidebar-actions">
+        <button type="button" class="theme-btn lang-btn" data-lang-toggle aria-label="한국어로 전환" title="한국어로 전환">KO</button>
+        <button type="button" class="theme-btn" data-theme-toggle>Auto</button>
+      </div>
+    </div>
+
+    <nav class="nav-sections" aria-label="Desktop navigation">
+      <div>
+        <span class="nav-group-label">Workspace</span>
+        <ul class="nav-list">
+          <li><a class="nav-link" data-route="home" href="/">Overview</a></li>
+          <li><a class="nav-link" data-route="guide" href="/chzzk-bot-guide">Chzzk Bot Guide</a></li>
+          <li><a class="nav-link" data-route="update" href="/chzzk-bot-update">Changelog</a></li>
+          <li><a class="nav-link active" data-route="tech" href="/technical-info">Technical Docs</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="nav-group-label">Services &amp; Admin</span>
+        <ul class="nav-list">
+          <li><a class="nav-link" data-route="ddns" href="/ddns"><span>DDNS Manager</span><span class="nav-tag">Auth</span></a></li>
+          <li><a class="nav-link" data-route="minecraft" href="/minecraft"><span>Minecraft Control</span><span class="nav-tag">Auth</span></a></li>
+          <li><a class="nav-link" data-route="hosting" href="/hosting"><span>File Hosting</span><span class="nav-tag">OTP</span></a></li>
+          <li><a class="nav-link" data-route="admin" href="/admin"><span>Admin Dashboard</span><span class="nav-tag">OTP</span></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="nav-group-label">Shortcuts</span>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+          <li><a class="nav-link" href="https://discord.gg/your-invite-code" target="_blank" rel="noopener noreferrer">Anonymous Support ↗</a></li>
+          <li><a class="nav-link" href="https://sub.example.com/" target="_blank" rel="noopener noreferrer">External Link ↗</a></li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Mobile Top Header -->
+  <header class="mobile-header">
+    <a class="brand-link" data-route="home" href="/">
+      <span class="brand-mark">AK</span>
+      <div class="brand-info">
+        <p class="brand-name">Azest_Kingscrown</p>
+        <p class="brand-sub">Technical Docs</p>
+      </div>
+    </a>
+    <div class="mobile-actions">
+      <button type="button" class="theme-btn lang-btn" data-lang-toggle aria-label="한국어로 전환" title="한국어로 전환">KO</button>
+      <button type="button" class="theme-btn" data-theme-toggle>Auto</button>
+      <button type="button" id="mobileMenuOpen" class="menu-btn" aria-label="Open menu">Menu</button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside id="mobileDrawer" class="drawer-overlay" aria-label="Mobile navigation">
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <div>
+          <p class="brand-name">Azest_Kingscrown</p>
+          <p class="brand-sub">Workspace &amp; Infra</p>
+        </div>
+        <button type="button" id="mobileMenuClose" class="drawer-close" aria-label="Close">&times;</button>
+      </div>
+      <nav class="nav-sections" aria-label="Mobile navigation menu">
+        <div>
+          <span class="nav-group-label">Workspace</span>
+          <ul class="nav-list">
+            <li><a class="nav-link" data-route="home" href="/">Overview</a></li>
+            <li><a class="nav-link" data-route="guide" href="/chzzk-bot-guide">Chzzk Bot Guide</a></li>
+            <li><a class="nav-link" data-route="update" href="/chzzk-bot-update">Changelog</a></li>
+            <li><a class="nav-link active" data-route="tech" href="/technical-info">Technical Docs</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="nav-group-label">Services &amp; Admin</span>
+          <ul class="nav-list">
+            <li><a class="nav-link" data-route="ddns" href="/ddns">DDNS Manager</a></li>
+            <li><a class="nav-link" data-route="minecraft" href="/minecraft">Minecraft Control</a></li>
+            <li><a class="nav-link" data-route="hosting" href="/hosting">File Hosting</a></li>
+            <li><a class="nav-link" data-route="admin" href="/admin">Admin Dashboard</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- App Shell -->
+  <div class="app-shell">
+    <main class="doc-main">
+      <div class="doc-header">
+        <div>
+          <div class="badge-row">
+            <span class="badge badge-success">Discord Verified App</span>
+            <span class="badge">Architecture &amp; Privacy</span>
+          </div>
+          <h1 class="doc-title">Technical Documentation &amp; Data Policy</h1>
+          <p class="doc-subtitle">
+            As an officially reviewed <strong>Discord Verified App</strong>, the Chzzk Notification Bot is engineered with strict privacy protection and high-availability architecture as top priorities.
+          </p>
+        </div>
+        <div class="btn-row" style="margin-top:0">
+          <a class="btn btn-secondary" data-route="guide" href="/chzzk-bot-guide">← Back to Guide</a>
+        </div>
+      </div>
+
+      <div class="doc-stack">
+        <!-- 1. Security -->
+        <section class="doc-card">
+          <h2>1. Security &amp; Privacy Policy</h2>
+          <h3>① Zero Privileged Intents: Security by Design</h3>
+          <p>Rather than merely promising privacy, the bot <strong>proves</strong> it technically by keeping every sensitive Discord permission (Privileged Gateway Intents) completely disabled (OFF).</p>
+          <ul class="doc-list">
+            <li><span class="highlight">Message Content Intent (OFF):</span> The bot cannot read or monitor user chat messages. It interacts exclusively via explicit slash commands (<code>/</code>).</li>
+            <li><span class="highlight">Server Members Intent (OFF):</span> Access to collect or enumerate server member rosters is completely disabled.</li>
+            <li><span class="highlight">Presence Intent (OFF):</span> User online status and activity data are never tracked.</li>
+          </ul>
+          <div class="doc-callout">
+            [ Placeholder for Discord Developer Portal screenshot showing all Privileged Intents disabled ]
+          </div>
+
+          <h3>② Slash-Commands-Only Architecture</h3>
+          <p>All features follow Discord's modern interaction specification. The bot stays completely passive and only responds when a user explicitly invokes a slash command.</p>
+
+          <h3>③ Official Discord Verification</h3>
+          <p>The bot has passed Discord's security review and identity verification to earn the <strong>Verified App</strong> badge, reliably serving 10,000+ total users in compliance with Discord's data protection policies.</p>
+        </section>
+
+        <!-- 2. Minimal Data -->
+        <section class="doc-card">
+          <h2>2. Minimal Data Storage &amp; Governance</h2>
+          <ul class="doc-list">
+            <li><span class="highlight">Data Minimization:</span> Only the Discord channel ID, the streamer's 32-character unique hash ID, and nickname are stored for alert delivery. No personally identifiable information (PII) such as names, emails, or member lists is ever collected.</li>
+            <li><span class="highlight">Isolated Cloud Infrastructure:</span> All records are stored in isolated SQLite databases running on Oracle Cloud and Google Cloud Platform instances with zero public network exposure.</li>
+            <li><span class="highlight">Immediate Data Erasure:</span> When a user deletes a subscription or removes the bot from a server, all associated server data is permanently purged immediately.</li>
+          </ul>
+        </section>
+
+        <!-- 3. Distributed Proxy -->
+        <section class="doc-card">
+          <h2>3. Global Distributed Proxy &amp; Network Reliability</h2>
+          <p>Alongside privacy, a distributed network architecture maximizes notification <strong>speed</strong> and <strong>uptime</strong>.</p>
+          <ul class="doc-list">
+            <li><span class="highlight">Global 5-Node Distributed Proxy:</span> Five independent nodes — Korea (GCP-Seoul, GCP-Direct), Global (Oracle Proxy 1 &amp; 2), and Edge (Cloudflare Workers) — distribute API traffic round-robin to prevent single points of failure and HTTP 429 rate limits.</li>
+            <li><span class="highlight">Massive Rotating IP Pool:</span> Leverages ~193,536 IPv4 addresses in GCP Seoul (asia-northeast3) and ~1,524,736 Cloudflare edge IPv4 addresses to stay resilient against throttling.</li>
+            <li><span class="highlight">Zero-Downtime Failover:</span> If any node encounters a timeout or block response, requests automatically retry across healthy standby nodes so alerts are never missed.</li>
+            <li><span class="highlight">Traffic Jitter:</span> Injects 0.1s–0.3s randomized jitter between polling requests to avoid mechanical burst patterns.</li>
+          </ul>
+          <div class="doc-callout">
+            [ Placeholder for real-time 5-node global Health Check monitoring screenshot ]
+          </div>
+        </section>
+
+        <!-- 4. Multi-Cloud HA -->
+        <section class="doc-card">
+          <h2>4. Multi-Cloud High Availability (HA) &amp; Data Sync</h2>
+          <p>Introduced on May 1, 2026 to guarantee continuous 24/7/365 operation.</p>
+
+          <h3>① High Availability (HA) Architecture</h3>
+          <ul class="doc-list">
+            <li><span class="highlight">Active-Passive Failover:</span> The primary node (GCP) and standby node (Oracle Cloud) continuously monitor each other; if the primary fails, the standby automatically promotes itself within 30 seconds.</li>
+            <li><span class="highlight">Multi-Cloud Resilience:</span> Distributing nodes across separate cloud providers ensures uninterrupted service even during a single-vendor regional outage.</li>
+          </ul>
+
+          <h3>② Real-Time Data Synchronization Engine</h3>
+          <ul class="doc-list">
+            <li><span class="highlight">Query Mirroring Technology:</span> Every database mutation (INSERT, UPDATE, DELETE) on the Master node is mirrored immediately via authenticated REST API to the Slave node, maintaining 99.9%+ consistency.</li>
+            <li><span class="highlight">Boot-Time Full-Sync:</span> Upon restart, a node fetches a complete snapshot from its peer to automatically reconcile any updates missed while offline.</li>
+          </ul>
+
+          <h3>③ Duplicate Alert &amp; Interaction Collision Prevention</h3>
+          <ul class="doc-list">
+            <li><span class="highlight">Startup Role Negotiation:</span> On startup, each node verifies whether an active Master already exists and enters standby mode accordingly, eliminating duplicate notifications.</li>
+            <li><span class="highlight">Smart Interaction Handling:</span> Only the active Master responds to slash commands, preventing <code>Unknown Interaction</code> race conditions.</li>
+          </ul>
+        </section>
+
+        <!-- 5. Region Lock -->
+        <section class="doc-card">
+          <h2>5. Chzzk Region-Lock (9004) Bypass &amp; Routing</h2>
+          <p>Deployed on May 3, 2026 using a dedicated <strong>Seoul Region Proxy (GCF)</strong> to resolve HTTP 500 / code 9004 errors on Korea-only streams.</p>
+          <ul class="doc-list">
+            <li><span class="highlight">Dedicated Seoul Relay Node:</span> Uses Google Cloud Functions (asia-northeast3) to handle domestic requests cleanly through 193,536 Korean IPv4 endpoints.</li>
+            <li><span class="highlight">Intelligent API Routing:</span> Live status API calls prioritize the Seoul proxy for geo-restricted streams, while community API calls continue leveraging the global distributed pool.</li>
+            <li><span class="highlight">Seamless Failover:</span> Automatically falls back to the next available node if the Seoul proxy experiences transient issues.</li>
+          </ul>
+        </section>
+
+        <!-- 6. Tech Stack -->
+        <section class="doc-card">
+          <h2>6. Technical Stack</h2>
+          <div class="table-wrap">
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>Layer</th>
+                  <th>Components</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Infrastructure</strong></td><td>GCP (Master &amp; Seoul Proxy), Oracle Cloud (Slave)</td></tr>
+                <tr><td><strong>Runtime</strong></td><td>Node.js (v20.x LTS)</td></tr>
+                <tr><td><strong>Frameworks</strong></td><td>discord.js v14, Express.js (Sync Server)</td></tr>
+                <tr><td><strong>Database</strong></td><td>SQLite3 (WAL &amp; Distributed Mirroring)</td></tr>
+                <tr><td><strong>Communication</strong></td><td>Axios (Inter-node secure communication)</td></tr>
+                <tr><td><strong>Scheduler</strong></td><td>node-schedule (High-precision cron)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 7. Permissions -->
+        <section class="doc-card">
+          <h2>7. Permission Justification</h2>
+          <p>The invite permission integer (<code>150528</code>) requests only the minimum technical permissions needed to operate.</p>
+          <ul class="doc-list">
+            <li><span class="highlight">View Channels:</span> Required to locate the target channel for alert delivery.</li>
+            <li><span class="highlight">Send Messages &amp; Embed Links:</span> Required to post Chzzk live/community notifications with rich thumbnail embeds.</li>
+            <li><span class="highlight">Mention Everyone:</span> Required when server admins configure <code>@everyone</code>, <code>@here</code>, or custom role pings on alerts.</li>
+          </ul>
+        </section>
+
+        <!-- 8. Deletion & Contact -->
+        <section class="doc-card">
+          <h2>8. Data Deletion Requests &amp; Contact</h2>
+          <p>To request deletion of your data or inquire about our privacy practices, please reach out via email below.</p>
+          <div class="doc-callout">
+            Email Contact: <code>contact@example.com</code>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" data-route="guide" href="/chzzk-bot-guide">← Back to Guide</a>
+            <a class="btn btn-secondary" data-route="home" href="/">Go to Overview</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="doc-footer">
+      <div class="doc-footer-inner">
+        <p class="footer-copy">© 2026 Chzzk Noti Bot · Azest_Kingscrown. All rights reserved.</p>
+        <div class="support-links">
+          <a class="support-kr" href="https://example.com/support-kr" target="_blank" rel="noopener noreferrer">Support (Korea)</a>
+          <a class="support-global" href="https://ko-fi.com/your-handle" target="_blank" rel="noopener noreferrer">Support (Global)</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Lightbox Viewer -->
+  <div id="imageViewer" class="viewer-overlay">
+    <button type="button" id="viewerClose" class="viewer-close" aria-label="Close">&times;</button>
+    <img class="viewer-content" id="viewerImage" alt="Enlarged preview" />
+    <div id="viewerCaption" class="viewer-caption"></div>
+  </div>
+
+  <script src="/docs/tremor-docs.js?v=20261125"></script>
+</body>
+</html>
