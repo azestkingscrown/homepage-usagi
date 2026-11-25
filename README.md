@@ -1,6 +1,6 @@
 # 🐰 Azest_Kingscrown Homepage & Infra Dashboard — `fp-usagi` Edition
 
-**[usagi-lang/fp-usagi](https://github.com/usagi-lang/fp-usagi)**(우사기랭 v0.7.0)로 구동되는 개인 홈페이지 및 서버/인프라 관리 대시보드입니다.  
+**[usagi-lang/fp-usagi](https://github.com/usagi-lang/fp-usagi)**(우사기랭 v0.7.1)로 구동되는 개인 홈페이지 및 서버/인프라 관리 대시보드입니다.  
 기존 SvelteKit 코드를 제거하고, **CGI / Effect Bridge 아키텍처(Approach A)**를 채택해 HTTP 라우팅·언어 감지·서버 가동률 고정소수점 연산·SVG 배지 생성·HTML 페이지 렌더링·API 응답 조립까지 실제 `.yaha` 프로그램이 요청마다 실행됩니다.
 
 ## Architecture
@@ -17,7 +17,7 @@ HTTP Request ──▶ bridge/http.ts
 ```
 
 - **런타임 의존성 0**: Node.js 24 이상만 있으면 `npm install`이나 번들 빌드 없이 바로 실행됩니다.
-- **우사기랭 코어 (`engine/usagi/`)**: `usagi-lang/fp-usagi` v0.7.0 TypeScript 인터프리터 & 인코더 (MIT License).
+- **우사기랭 코어 (`engine/usagi/`)**: `usagi-lang/fp-usagi` v0.7.1 TypeScript 인터프리터 & 인코더 (MIT License).
 - **실시간 실행 트레이스**: 모든 HTML 응답에 실행된 `.yaha` 모듈 경로, Effect 목록, 실행 시간(`X-Usagi-Modules`, `X-Usagi-Time-Ms`)이 포함됩니다.
 
 ## Directory Structure
@@ -25,7 +25,7 @@ HTTP Request ──▶ bridge/http.ts
 ```text
 homepage-usagi/
 ├── server.ts                  # HTTP 서버 진입점
-├── engine/usagi/              # fp-usagi v0.7.0 코어 인터프리터 · 파서 · 인코더
+├── engine/usagi/              # fp-usagi v0.7.1 코어 인터프리터 · 파서 · 인코더
 ├── bridge/
 │   ├── http.ts                # HTTP 수신, 정적 파일 서빙, .yaha 트램폴린 루프
 │   ├── effects.ts             # 시스템 메트릭, Lanyard, Docker, DDNS, OTP, 샌드박스 실행기

@@ -333,7 +333,7 @@ buildPageYaha(
       <h1 class="h1">🐰 우사기랭 플레이그라운드</h1>
       <p class="sub">브라우저에서 우사기랭(.yaha)을 바로 실행하고, 이 웹사이트를 돌리는 실제 .yaha 소스 코드도 확인해 보세요.</p>
     </div>
-    <span class="badge badge-indigo">fp-usagi v0.7.0</span>
+    <span class="badge badge-indigo">fp-usagi v0.7.1</span>
   </div>
 
   <div id="usagi-playground" class="stack">
@@ -398,7 +398,7 @@ buildPageYaha(
       <h1 class="h1">🐰 Usagi-lang Playground</h1>
       <p class="sub">Run Usagi-lang (.yaha) code live and inspect the actual .yaha source files powering this website.</p>
     </div>
-    <span class="badge badge-indigo">fp-usagi v0.7.0</span>
+    <span class="badge badge-indigo">fp-usagi v0.7.1</span>
   </div>
 
   <div id="usagi-playground" class="stack">
